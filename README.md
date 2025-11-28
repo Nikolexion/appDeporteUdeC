@@ -1,23 +1,70 @@
-# React + Vite
+# Court Manager App 🏀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para gestionar canchas, equipos y torneos deportivos.
 
-Currently, two official plugins are available:
+## 🚀 Desarrollo Local
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para ejecutar la aplicación en tu computador:
 
-## React Compiler
+```bash
+# Instalar dependencias (solo la primera vez)
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-
-Para correr el programa, debes ejecutar el siguiente comando:
-
-``` bash
+# Ejecutar en modo desarrollo
 npm run dev
 ```
+
+La aplicación estará disponible en `http://localhost:5173`
+
+## 📦 Despliegue en Netlify
+
+### Opción 1: Despliegue Automático desde GitHub (Recomendado)
+
+1. **Sube tu código a GitHub** (si aún no lo has hecho)
+   
+2. **Ve a [Netlify](https://netlify.com)** y crea una cuenta (puedes usar tu cuenta de GitHub)
+
+3. **Haz clic en "Add new site" → "Import an existing project"**
+
+4. **Conecta con GitHub** y selecciona tu repositorio
+
+5. **Configuración automática**: Netlify detectará automáticamente la configuración gracias al archivo `netlify.toml`
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+
+6. **Haz clic en "Deploy"** y espera unos minutos
+
+7. **¡Listo!** Obtendrás una URL como `https://tu-proyecto.netlify.app` que puedes compartir con cualquier persona
+
+### Opción 2: Despliegue Manual (Drag & Drop)
+
+1. **Construye la aplicación localmente**:
+   ```bash
+   npm run build
+   ```
+
+2. **Ve a [Netlify](https://app.netlify.com/drop)** (sección "Deploy manually")
+
+3. **Arrastra la carpeta `dist`** que se creó en tu proyecto
+
+4. **¡Listo!** Netlify te dará una URL pública
+
+## 🔄 Actualizar el Sitio
+
+- **Con GitHub**: Solo haz `git push` y Netlify actualizará automáticamente
+- **Manual**: Vuelve a hacer `npm run build` y arrastra la nueva carpeta `dist`
+
+## 📝 Características
+
+- ✅ Progressive Web App (PWA) - Se puede instalar en el móvil
+- ✅ Responsive Design - Funciona en cualquier dispositivo
+- ✅ React Router - Navegación entre páginas
+- ✅ Gestión de canchas, equipos y torneos
+
+## 🛠️ Tecnologías
+
+- React 19
+- Vite
+- React Router
+- Lucide Icons
+- PWA Support

@@ -1,0 +1,17 @@
+# Configuración de Netlify para React + Vite
+[build]
+  # Comando para construir la aplicación
+  command = "npm run build"
+  
+  # Directorio donde se generan los archivos de producción
+  publish = "dist"
+
+# Redirecciones para que React Router funcione correctamente
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Variables de entorno (opcional)
+[build.environment]
+  NODE_VERSION = "18"
